@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Calzada Derbez - AUTOR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?books,writing') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6">
+        <h1 class="text-2xl font-bold text-center mb-4">Luis Calzada Derbez - AUTOR</h1>
+        
+        <label for="book-selector" class="block text-lg font-semibold">Selecciona un libro:</label>
+        <select id="book-selector" class="w-full p-2 border rounded-lg mb-4 bg-gray-50">
+            <option value="default">Selecciona un Título</option>
+            <option value="alternativo">Alternativo</option>
+            <option value="descontrol">Descontrol</option>
+            <option value="semblanza">Semblanza Luis Calzada Derbez</option>
+        </select>
+        
+        <div id="sinopsis-container" class="p-4 border rounded-lg bg-gray-50 text-justify">
+            <h2 id="book-title" class="text-xl font-bold"></h2>
+            <h3 id="book-subtitle" class="text-md font-semibold text-gray-600 mb-2"></h3>
+            <p id="book-synopsis" class="text-gray-800"></p>
+        </div>
+    </div>
+
+    <script>
+        const books = {
+            default: {
+                title: "Selecciona un Título",
+                subtitle: "",
+                synopsis: `Bienvenidos a un espacio donde las palabras sanan y las historias transforman. Te invito a descubrir mis dos primeras novelas: ALTERNATIVO, una celebración al amor propio, la aceptación y la belleza de la diversidad; y DESCONTROL, un viaje hacia el entendimiento de nuestras emociones y la liberación de aquello que no podemos controlar. A través de estas páginas, aprenderás a abrazar lo inevitable, a soltar lo que pesa y a enfocarte en lo que verdaderamente puedes cambiar. ¿Listo para encontrarte en estas historias?`
+            },
+            alternativo: {
+                title: "Alternativo",
+                subtitle: "Una historia de amor propio, aceptación y un abrazo a la diversidad",
+                synopsis: `Laiza y Frann, dos amigos con discapacidad que poseen dones más allá de lo natural, conocen a Airoa, quien no sabe que también cuenta con estos dones. Juntos te comparten su emocionante historia mostrándote la vida desde su perspectiva.  
+Los juicios, emociones y decisiones de Airoa crean un enorme giro en su destino; esto provoca la pérdida de sus dones. Como resultado, comienza a percibir la vida desde una experiencia humanamente real, creando caos, desaliento y mucha frustración.  
+Nosotros, al igual que ellos, tomamos decisiones constantemente; elegimos diferentes caminos durante nuestra vida buscando siempre vivir la felicidad a lo largo del trayecto.
+Esta es una historia que nos invita a desprendernos de los juicios sobre las apariencias y a abrir más el corazón hacia la aceptación y el amor. Una historia donde el camino a tomar siempre es alternativo, pero el final no lo querrás cambiar.
+
+No apto para todo público. Esta obra está dirigida a quienes creen en el amor y en el respeto hacia sí mismos, y a aquellos que tienen abierto el corazón para percibir más allá de las apariencias, para quienes sus sentidos no son el límite, y a quienes, habiendo sufrido, eligen honrar cada día de su existencia como un acto de valentía y gratitud.
+
+Si tu alma contiene amor, esperanza, compasión, fe y armonía, y tu corazón está lleno de acción, entonces esta historia es para ti.`
+            },
+            descontrol: {
+                title: "Descontrol",
+                subtitle: "El enemigo está dentro de ti",
+                synopsis: `Daan, un neurocientífico en una de las universidades más prestigiosas de Ámsterdam, descubre que posee un poder extraordinario: puede alterar la bioquímica en el cuerpo de las personas para manipular sus emociones. Convencido de que está ayudando, usa su habilidad para solucionar los conflictos de otros, evitando enfrentar su propio caos interno. Pero el control es una ilusión, y lo que comienza como un don se convierte en una amenaza cuando las consecuencias de su abuso lo arrastran a un caos que no vio venir.
+
+Atrapado en una red de secretos junto a Sophie, una doctora en física que solo cree en sí misma, y Sven, un genetista dispuesto a todo por éxito, Daan deberá enfrentar una verdad inquietante: su poder no es un accidente y su origen esconde algo mucho más complejo de lo que imaginó.
+
+En su búsqueda por encontrar la paz interna, aprenderá que no puede cambiar el mundo sin antes enfrentar sus propias emociones y aceptar que el verdadero crecimiento viene de soltar y dejar ser, no de controlar.
+Con un mensaje profundo sobre la importancia de respetar la vida y las decisiones de los demás, DESCONTROL explora los límites del poder humano, el costo de la manipulación y la necesidad de enfrentar nuestras emociones más íntimas antes de que nos consuman por completo.`
+            },
+            semblanza: {
+                title: "Semblanza Luis Calzada Derbez",
+                subtitle: "",
+                synopsis: `Luis Calzada Derbez es un autor emergente originario de San Luis Potosí, México, que debuta en la escena literaria con su novela ALTERNATIVO.
+Residente en Santiago, Nuevo León, Luis ha dedicado su vida profesional al ámbito empresarial como consultor de negocios, especializado en procesos Lean Six Sigma Green Belt. Con una Licenciatura en Comercio Internacional y una Maestría en Finanzas, ha forjado una carrera caracterizada por la precisión, el análisis y la resolución de problemas. Sin embargo, su pasión por la lectura y la escritura lo acompaña desde niño, cultivando una voz literaria introspectiva y auténtica.
+ALTERNATIVO, su primera obra publicada, es mucho más que una novela: es una invitación a la reflexión, la transformación personal y el amor propio. La obra aborda temas universales que conectan con los desafíos del autoconocimiento y la aceptación, llevando al lector a emprender un viaje hacia el descubrimiento de su verdadero ser.
+En palabras del autor:
+"Esta obra no solo narra una historia, sino que también es una llamada a la acción, un recordatorio de que en el corazón reside la oportunidad de encontrar nuestro verdadero ser."
+Aspectos destacados de ALTERNATIVO:
+Una historia de amor propio y aceptación: La temática central gira en torno a la búsqueda de la autoaceptación y el desarrollo del amor propio.
+Una llamada a la acción: La novela no se limita a contar una historia; busca inspirar a los lectores a tomar el control de sus vidas y avanzar hacia su plenitud.
+Una experiencia transformadora: Luis Calzada Derbez cree en el poder de la literatura para generar cambios positivos y duraderos en las personas.
+Luis ha encontrado en la escritura una forma de tender puentes entre su experiencia profesional y su sensibilidad narrativa. Su enfoque estructurado, forjado a lo largo de años de trabajo empresarial, se une a su creatividad literaria para ofrecer historias profundas y significativas.
+Con ALTERNATIVO, el autor busca dejar una huella en sus lectores, invitándolos a reflexionar sobre el poder de la aceptación y la importancia de abrazar el cambio. Esta primera novela marca el inicio de una prometedora carrera literaria que combina análisis, emoción y un deseo genuino de inspirar.
+
+© 2025 Luis Calzada Derbez. Todos los derechos reservados.`
+            }
+        };
+
+        function updateSynopsis() {
+            const bookSelector = document.getElementById("book-selector");
+            const selectedBook = bookSelector.value;
+            
+            if (books[selectedBook]) {
+                document.getElementById("book-title").innerText = books[selectedBook].title;
+                document.getElementById("book-subtitle").innerText = books[selectedBook].subtitle;
+                document.getElementById("book-synopsis").innerText = books[selectedBook].synopsis;
+            }
+        }
+
+        document.getElementById("book-selector").addEventListener("change", updateSynopsis);
+        window.addEventListener("load", () => {
+            document.getElementById("book-selector").value = "default";
+            updateSynopsis();
+        });
+    </script>
+</body>
+</html>
